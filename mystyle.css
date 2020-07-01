@@ -1,0 +1,127 @@
+body {
+    background-color: lightpink;
+}
+
+button {
+    margin-top: 200px;
+    width:250px;
+    height: 50px;
+    border-radius: 20px;
+    font-family: inherit;
+    border: none;
+    background-color: mediumaquamarine;
+    font-size: 18px;
+    color: deeppink;
+}
+
+.sliderbuttons {
+    padding:10px;
+    border-radius:30px;
+    background-color:mediumaquamarine;
+}
+
+h9 {
+    font-size: 60px;
+    color: white;
+    text-align:center;
+    font:'Futura Full Stack';
+}
+
+.Sausagedogs {
+}
+
+h1 {
+    color:mediumaquamarine;   
+    font-size: 50px;
+}
+
+.rude {
+    color:white;
+    font-size: 40px;
+}
+
+h2{
+    margin-top:60px;
+    text-align: center;
+    font-family: inherit
+}
+
+h3 {
+    font-family: cursive;
+    margin-top: 150px;
+    margin-left: 50px;
+}
+
+h4 {
+    font-family: fantasy;
+    position:absolute;
+    top: 80%; 
+    text-align:center;
+}
+
+h5 {
+    text-decoration: underline;
+    text-align: left;
+    margin-left: 40px;
+    
+}
+
+h6 {
+    text-align:right;
+    padding-right: 25px;
+    margin-bottom: 30px;
+    
+    
+}
+
+h7 {
+    text-align:center;
+    margin-top: -350px;
+    
+}
+
+.wrapper {
+    margin-left:100px;
+    margin-bottom: 50px;
+}
+
+.showdogs {
+    margin-left: 450px;
+    margin-top: 125px;
+    width:250px;
+    height: 50px;
+    border-radius: 20px;
+    font-family: inherit;
+    border: none;
+    background-color: mediumaquamarine;
+    font-size: 18px;
+    color: deeppink;
+}
+
+#reformed {
+    position: absolute;
+    margin-top: 10px;
+    text-align: center;
+    margin-left: -10px;
+}
+
+#evil {
+    position: absolute;
+    margin-top: 10px;
+    text-align: center;
+    right:0;
+}
+
+.trump {
+    color:red;
+    font-family: serif;
+    font-size: 60px;
+    text-align: center;
+}
+
+
+
+
+
+
+
