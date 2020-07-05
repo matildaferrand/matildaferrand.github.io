@@ -1,5 +1,12 @@
 body {
     background-color: lightpink;
+    margin-top:2em;
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-bottom: 2em;
+    border-color: mediumaquamarine;
+    border-width: 5px;
+    border-style:solid;
 }
 
 button {
@@ -7,12 +14,17 @@ button {
     width:250px;
     height: 50px;
     border-radius: 20px;
-    font-family: inherit;
+    font-family: 'Permanent Marker', cursive;
     border: none;
     background-color: mediumaquamarine;
     font-size: 18px;
     color: deeppink;
 }
+
+button:hover {
+    color: white;
+}
+
 
 .sliderbuttons {
     padding:10px;
@@ -21,10 +33,10 @@ button {
 }
 
 h3 {
-    font-size: 60px;
+    font-size: 50px;
     color: white;
     text-align:center;
-    font:'Futura Full Stack';
+    font-family: 'Permanent Marker', cursive;
 }
 
 .Sausagedogs {
@@ -33,6 +45,7 @@ h3 {
 h1 {
     color:mediumaquamarine;   
     font-size: 50px;
+    font-family: 'Permanent Marker'
 }
 
 .rude {
@@ -83,17 +96,20 @@ h1 {
 }
 
 .showdogs {
-    margin-left: 450px;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 125px;
+    margin-bottom: 10px;
     width:250px;
     height: 50px;
     border-radius: 20px;
-    font-family: inherit;
+    font-family: 'Permanent Marker', cursive;
     border: none;
     background-color: mediumaquamarine;
     font-size: 18px;
     color: deeppink;
 }
+
 
 #reformed {
     position: absolute;
@@ -131,5 +147,17 @@ h1 {
 #submit {
     margin-top: 50px;
 }
+
+[type=radio] {
+    text-align:left;
+}
+
+.dumbass {
+    border-radius:50%;
+    border-color: red;
+    border-width: 20px;
+    border-style: solid;
+}
+
 
 

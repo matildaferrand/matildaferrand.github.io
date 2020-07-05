@@ -1,4 +1,11 @@
-// coding an image slider 
+/* Things I want the website to do: 
+ 1. I want the image slider to be able to move using back and forth buttons. 
+ 2. I need to fix the styling and the styling for websites. 
+ 3. I potentially want some of the words to flash different colors. 
+ 5. perhaps another section with a non sausage dog animal of the week/ a news letter. lmaoooooooo unsure though. 
+ 6. Make a multicolor prompt box that tells people what their quiz result is. 
+ 
+*/
 
 var slideindex = 1;
 
@@ -65,11 +72,11 @@ function plusdivs(n) {
     showdivs(slideindex += n);
 }
 
-//To see the sausage dog slider
+//To see the sausage dog slider -> incomplete
 document.getElementById("showdogs").addEventListener('click', function(){
     emptypage()
     showdivs(slideindex);
-})
+});
 
 //To take the sausage dog quiz
 document.getElementById("questions").addEventListener('click', function(){
@@ -109,13 +116,14 @@ document.getElementById("questions").addEventListener('click', function(){
             var output = [];
             var choices;
             for (var i=0; i < questions.length; i++) {
-                choices = [];
-                for (letter in questions[i].choices) {
+                choices = []
+                for (a in questions[i].choices) {
+                    var b = (parseInt(a) +1);
                     choices.push(
                         '<label>'
-                            + '<input type="radio" name="question'+ i +'" value="' +letter + '">' 
-                            + letter + '. '
-                            + questions[i].choices[letter]
+                            + '<input type="radio" name="question'+ i+ +'" value="' + a + '">' 
+                            + b  + '. '
+                            + questions[i].choices[a]
                         + '</label>'
                     );
                 }
@@ -168,7 +176,7 @@ document.getElementById("loser").addEventListener('click', function() {
 document.getElementById('reformed').addEventListener('click', function() {
     emptypage();
     showdivs(slideindex);
-})
+ })
 
 //If they stick to their guns
 document.getElementById('evil').addEventListener('click', function() {
