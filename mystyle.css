@@ -1,9 +1,12 @@
 body {
-    background-color: lightpink;
+    background: linear-gradient(90deg, pink, hsl(340, 90%, 78%), pink);
     margin-top:2em;
     margin-left: 2em;
     margin-right: 2em;
     margin-bottom: 2em;
+}
+
+.border {
     border-color: mediumaquamarine;
     border-width: 5px;
     border-style:solid;
@@ -23,6 +26,7 @@ button {
 
 button:hover {
     color: white;
+    transform: scale(1.25);
 }
 
 
@@ -37,57 +41,6 @@ h3 {
     color: white;
     text-align:center;
     font-family: 'Permanent Marker', cursive;
-}
-
-.Sausagedogs {
-}
-
-h1 {
-    color:mediumaquamarine;   
-    font-size: 50px;
-    font-family: 'Permanent Marker'
-}
-
-.rude {
-    color:white;
-    font-size: 40px;
-}
-
-#h2{
-    margin-top:60px;
-    text-align: center;
-    font-family: inherit
-}
-
-#h3 {
-    font-family: cursive;
-    margin-top: 150px;
-    margin-left: 50px;
-}
-
-#h4 {
-    font-family: fantasy;
-    position:absolute;
-    top: 80%; 
-    text-align:center;
-}
-
-#h5 {
-    text-decoration: underline;
-    text-align: left;
-    margin-left: 40px; 
-}
-
-#h6 {
-    text-align:right;
-    padding-right: 25px;
-    margin-bottom: 30px;
-}
-
-#h7 {
-    text-align:center;
-    margin-top: -350px;
-    
 }
 
 .wrapper {
@@ -110,19 +63,146 @@ h1 {
     color: deeppink;
 }
 
+.Sausagedogs {
+}
+
+h1 {
+    margin-left:auto;
+    margin-right:auto;
+    color:mediumaquamarine;   
+    font-size: 50px;
+    font-family: 'Permanent Marker'
+}
+
+.rude {
+    color:white;
+    font-size: 25px;
+    
+}
+
+#h2{
+    position: absolute;
+    text-align: center;
+    font-family: inherit;
+    top: 5%;
+    left: 50%;
+}
+
+#h3 {
+    position:absolute;
+    font-family: cursive;
+    top: 35%;
+    left: 50%;
+}
+
+#h4 {
+    position: absolute;
+    font-family: fantasy;
+    top: 60%; 
+    left: 25%;
+}
+
+#h5 {
+    position: absolute;
+    text-decoration: underline;
+    top: 35%;
+    left: 10%;
+}
+
+#h6 {
+    position: absolute;
+    top: 60%;
+    left: 70%;
+    text-align: center;
+}
+
+#h7 {
+    position: absolute;
+    top: 85%; 
+    left: 30%;
+    text-align:center;
+}
+
+#ball {
+    border-radius: 50%;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    animation-name: sucker;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+    position:absolute;
+    animation-timing-function: linear;
+}
+
+@keyframes sucker {
+    0% {
+        top:5%;
+        left: 50%;
+        background-color: red;
+    }
+    10% {
+        top: 5%;
+        left: 50%;
+        background-color: red;
+    }
+    20% {
+        top:35%;
+        left:10%;
+        background-color: orange;
+    }
+    30% {
+        top: 35%;
+        left: 50%;
+        background-color: yellow;
+    }
+    40% {
+        top: 60%;
+        left: 70%;
+        background-color: green;
+    }
+    50% {
+        top: 60%;
+        left: 25%;
+        background-color: blue;
+    }
+    60% {
+        top: 90%;
+        left: 50%;
+        background-color: purple;
+    }
+    70% {
+        top: 5%;
+        left: 5%;
+        background-color: hotpink;
+    }
+    80% {
+        top: 5%;
+        left: 95%;
+        background-color: hotpink;
+    }
+    100% {
+        top: 5%;
+        left: 95%;
+        background-color: hotpink;
+    }
+}
+
 
 #reformed {
     position: absolute;
     margin-top: 10px;
     text-align: center;
-    margin-left: -10px;
+    left: 0;
+    margin-left: 45px;
 }
 
 #evil {
     position: absolute;
     margin-top: 10px;
     text-align: center;
-    right:0;
+    right: 0;
+    margin-right: 45px;
 }
 
 .trump {

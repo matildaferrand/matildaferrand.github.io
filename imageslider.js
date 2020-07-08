@@ -4,7 +4,7 @@
  3. I potentially want some of the words to flash different colors. 
  5. perhaps another section with a non sausage dog animal of the week/ a news letter. lmaoooooooo unsure though. 
  6. Make a multicolor prompt box that tells people what their quiz result is. 
- 
+ 7. Make the javascript neater.
 */
 
 var slideindex = 1;
@@ -41,6 +41,9 @@ function emptypage () {
     document.getElementById('trump').style.display = 'none';
     document.getElementById('submit').style.display = 'none';
     document.getElementById('quiz').style.display = 'none';
+    document.getElementById('ball').style.display = 'none';
+    document.querySelector('body').classList.remove('border');
+
 }
 
 //initial start page
@@ -49,6 +52,7 @@ function homepage () {
     document.getElementById('loser').style.display = 'block';
     document.getElementById('showdogs').style.display = 'block';  
     document.getElementById('questions').style.display = 'block';
+    document.querySelector('body').classList.add('border');
 }
 
 //involved in the sausagedog display
@@ -92,23 +96,23 @@ document.getElementById("questions").addEventListener('click', function(){
     var questions = [{
         question: 'What was the name of Picasso\'s muse (the daschund)',
         choices: ['Rolf','Lump', 'Alger',],
-        correctanswer : 1,
+        correctanswer : 2,
     }, {
         question: 'What were daschund\'s bred to hunt?' ,
         choices: ['Frogs', 'Foxes', 'Badgers'],
-        correctanswer: 2,
+        correctanswer: 3,
     }, {
         question: 'Where did daschund races start?',
         choices: ['Germany', 'the UK', 'Australia'],
-        correctanswer: 2,
+        correctanswer: 3,
     }, {
         question: 'What do daschund\'s need when going out in the rain?',
         choices: ['They shouldn\'t', 'a jacket', 'rain boots'],
-        correctanswer: 1,
+        correctanswer: 2,
     }, { 
         question: 'Sausage dog\'s Wadl and Hexl caused an international emergancy between germany and which country?' ,
         choices: ['Austria','the UK', 'the USA'],
-        correctanswer: 0,   
+        correctanswer: 1,   
     }]
     
     function makeQuiz(questions, quizcontainer, resultscontainer, submitbutton) {
@@ -162,15 +166,27 @@ document.getElementById("questions").addEventListener('click', function(){
 //If someone says they don't like sausage dogs
 document.getElementById("loser").addEventListener('click', function() {
     emptypage();
-    setTimeout(function() {document.getElementById('h2').style.display = 'block';}, 1000);
-    setTimeout(function() {document.getElementById('h5').style.display = 'block';}, 2000);
-    setTimeout(function() {document.getElementById('h3').style.display = 'block';}, 3000);
-    setTimeout(function() {document.getElementById('h6').style.display = 'block';}, 4000);
-    setTimeout(function() {document.getElementById('h7').style.display = 'block';}, 5000);
-    setTimeout(function() {document.getElementById('h4').style.display = 'block';}, 6000);
-    setTimeout(function() {document.getElementById('reformed').style.display = 'block';}, 8000);
-    setTimeout(function() {document.getElementById('evil').style.display = 'block';}, 8000);
+    document.getElementById('ball').style.display = 'block';
+/*   
+    function changecolors (input) {
+        for (var i = 0; i < 5; i++) {
+            document.getElementById(input).style.color = (colors[i]);
+        }
+    } 
+*/
+    //changecolors('h5');
+    
+    setTimeout(function() {document.getElementById('h2').style.display = 'block';}, 1100);
+    setTimeout(function() {document.getElementById('h5').style.display = 'block';}, 2100);
+    setTimeout(function() {document.getElementById('h3').style.display = 'block';}, 3100);
+    setTimeout(function() {document.getElementById('h6').style.display = 'block';}, 4100);
+    setTimeout(function() {document.getElementById('h4').style.display = 'block';}, 5100);
+    setTimeout(function() {document.getElementById('h7').style.display = 'block';}, 6100);
+    setTimeout(function() {document.getElementById('reformed').style.display = 'block';}, 7100);
+    setTimeout(function() {document.getElementById('evil').style.display = 'block';}, 8100);
+    
     })
+    
 
 //if they change their mind
 document.getElementById('reformed').addEventListener('click', function() {
