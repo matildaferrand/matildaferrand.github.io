@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+<link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+
 
 <html>
     <head>
@@ -10,7 +12,9 @@
         
     </head> 
     <body>
-        <h1 style="color:white; margin-left:475px;font-weight:bold"> Sausage Dogs </h1>
+        <h1> Sausage Dogs </h1>
+        <button class='home' id='gohome'><i class= "em em-classical_building"></i>
+</button>
         <button class="showdogs" id="showdogs"> Click here to see sausage dogs </button>
         <button class="showdogs" id="questions"> Take a sausage dog quiz </button>
         <button class="showdogs" id="loser"> I don't like sausage dogs</button>
@@ -22,27 +26,32 @@
             <p class=rude id=h3> Your face makes onions cry </p>
             <p class=rude id=h4> Dumbass </p>
             <p class=rude id=h5> TOAD </p>
-            <p class=rude id=h6> I'd beat thee, but I would infect my hands</p>
+            <p class=rude id=h6> I will hunt you down :) </p>
             <p class=rude id=h7> Your mother was a hamster and your father smelled of elderberries </p>
             <h2 class=trump> It's like looking in a mirror </h2>
             <h3 class=quiz> How much do you know about Sausage Dogs? </h3>
-            <img class=dumbass id=trump src="images/demon.jpg" style="width: 800px; margin-left: auto; margin-right: auto;">
+            <img class=dumbass id=trump src="images/demon.jpg">
         </div>
-        <div class="wrapper" style="max-width:1000px;position:relative">
-            <img class="Sausagedogs" id="sd1" src="images/1.jpg" style="width:100%">
-            <img class="Sausagedogs" id="sd2" src="images/2.jpg" style="width:100%">
-            <img class="Sausagedogs" id="sd3" src="images/3.jpg" style="width:100%">
-            <img class="Sausagedogs" id="sd4" src="images/4.JPEG" style="width:100%">
-            <img class="Sausagedogs" id="sd5" src="images/5.jpg" style="width:100%">
-            <img class="Sausagedogs" id="sd6" src="images/6.jpg" style="width:100%">
-            <img class="Sausagedogs" id="sd7" src="images/7.jpg" style="width:100%">
-            <img class="Sausagedogs" id="sd8" src="images/8.jpg" style="width:100%">
-            <a class="sliderbuttons" id="btn1" style="position:absolute;top:45%;left:0"onclick=plusdivs(-1)><span id="btnl">&lt;</span></a>
-            <a class="sliderbuttons" id="btn2" style="position:absolute;top:45%;right:0"onclick=plusdivs(1)><span id="btnr">&gt;</span></a>
+        <div class="wrapper">
+            <img class="Sausagedogs" id="sd1" src="images/1.jpg">
+            <img class="Sausagedogs" id="sd2" src="images/2.jpg">
+            <img class="Sausagedogs" id="sd3" src="images/3.jpg" >
+            <img class="Sausagedogs" id="sd4" src="images/4.JPEG" >
+            <img class="Sausagedogs" id="sd5" src="images/5.jpg">
+            <img class="Sausagedogs" id="sd6" src="images/6.jpg">
+            <img class="Sausagedogs" id="sd7" src="images/7.jpg">
+            <img class="Sausagedogs" id="sd8" src="images/8.jpg">
+            <button class="sliderbuttons" id="btn1" onclick=plusdivs(-1)><span id="btnl">&lt;</span></button>
+            <button class="sliderbuttons" id="btn2" onclick=plusdivs(1)><span id="btnr">&gt;</span></button>
         </div>
         <div class="quizstuff" id='quiz'></div>
             <button class="showdogs" id=submit> Finished Quiz </button> 
         <div id='results'></div>
+        <div class='otherdogs'>
+            <button class='showdogs' id='showotherdogs'> Distinguished Dogs </button>
+            <h4> Dog of the Week </h4>
+            <img class="otherdogs" id="backgroundbanner" src="images/banner1.jpeg">
+        </div>
         <script src="imageslider.js"></script>
     </body>
 

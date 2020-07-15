@@ -1,15 +1,15 @@
 body {
     background: linear-gradient(90deg, pink, hsl(340, 90%, 78%), pink);
-    margin-top:2em;
-    margin-left: 2em;
-    margin-right: 2em;
-    margin-bottom: 2em;
 }
 
 .border {
     border-color: mediumaquamarine;
     border-width: 5px;
     border-style:solid;
+    margin-top:2em;
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-bottom: 2em;
 }
 
 button {
@@ -29,11 +29,35 @@ button:hover {
     transform: scale(1.25);
 }
 
-
 .sliderbuttons {
     padding:10px;
-    border-radius:30px;
+    border-radius:30px;;
+    width: 20px;
     background-color:mediumaquamarine;
+    position:absolute;
+    top: 45%;
+    color: white;
+    text-align: center;
+}
+
+#btn1 {
+    left: 0;
+}
+
+#btn2 {
+    right: 0;
+}
+
+.home {
+    position:relative;
+    background-color: lightskyblue;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 0px;
+    top: 0px;
+    width: 40px;
+    height: 40px;
+    border-radius: 30%;
 }
 
 h3 {
@@ -46,13 +70,16 @@ h3 {
 .wrapper {
     margin-left:100px;
     margin-bottom: 50px;
+    max-width: 1000px;
+    position: relative;
 }
 
 .showdogs {
+    position: relative;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 125px;
-    margin-bottom: 10px;
+    margin-top: 100px;
+    margin-bottom: 100px;
     width:250px;
     height: 50px;
     border-radius: 20px;
@@ -63,13 +90,19 @@ h3 {
     color: deeppink;
 }
 
+#showotherdogs {
+
+}
+
 .Sausagedogs {
+    width: 100%;
 }
 
 h1 {
     margin-left:auto;
     margin-right:auto;
-    color:mediumaquamarine;   
+    text-align: center;
+    color:white;   
     font-size: 50px;
     font-family: 'Permanent Marker'
 }
@@ -237,7 +270,27 @@ h1 {
     border-color: red;
     border-width: 20px;
     border-style: solid;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+#showotherdogs {
+    margin-left: auto;
+    margin-right: auto;
+}
 
+.backgroundbanner1 {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/banner1.jpeg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-repeat: no-repeat;
+    height: 40%;
+    padding: 0px;
+}
 
+h4 {
+    font-size: 30px;
+    text-align:center;
+}

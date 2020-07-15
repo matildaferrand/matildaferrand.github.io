@@ -5,6 +5,8 @@
  5. perhaps another section with a non sausage dog animal of the week/ a news letter. lmaoooooooo unsure though. 
  6. Make a multicolor prompt box that tells people what their quiz result is. 
  7. Make the javascript neater.
+ 8. Center my images
+ 9. Make it slightly more phone worthy. 
 */
 
 var slideindex = 1;
@@ -42,8 +44,11 @@ function emptypage () {
     document.getElementById('submit').style.display = 'none';
     document.getElementById('quiz').style.display = 'none';
     document.getElementById('ball').style.display = 'none';
+    document.getElementById('showotherdogs').style.display = 'none';
     document.querySelector('body').classList.remove('border');
-
+    document.querySelector('h4').style.display = 'none';
+    document.getElementById('backgroundbanner').style.display = 'none';
+    document.getElementById('gohome').style.display = 'none';
 }
 
 //initial start page
@@ -53,7 +58,15 @@ function homepage () {
     document.getElementById('showdogs').style.display = 'block';  
     document.getElementById('questions').style.display = 'block';
     document.querySelector('body').classList.add('border');
+    //document.getElementById('showotherdogs').style.display = 'block';
 }
+
+document.getElementById('gohome').addEventListener('click', function() {
+    homepage();
+})
+
+
+
 
 //involved in the sausagedog display
 function showdivs(n){
@@ -61,6 +74,7 @@ function showdivs(n){
     document.querySelector('#btn1').style.display = 'block';
     document.querySelector('#btn2').style.display = 'block';
     document.querySelector('h1').style.display = 'block';
+    document.getElementById('gohome').style.display = 'block';
     var i;
     var x = document.getElementsByClassName("Sausagedogs");
     if (n > x.length) {slideindex = 1}
@@ -85,6 +99,7 @@ document.getElementById("showdogs").addEventListener('click', function(){
 //To take the sausage dog quiz
 document.getElementById("questions").addEventListener('click', function(){
     emptypage();
+    document.getElementById('gohome').style.display = 'block';
     document.querySelector('h3').style.display = 'block';
     document.getElementById('submit').style.display = 'block';
     document.getElementById('results').style.display = 'block';
@@ -95,8 +110,12 @@ document.getElementById("questions").addEventListener('click', function(){
 
     var questions = [{
         question: 'What was the name of Picasso\'s muse (the daschund)',
-        choices: ['Rolf','Lump', 'Alger',],
-        correctanswer : 2,
+        choices: {
+            a: 'Rolf',
+            b: 'Lump',
+            c: 'Alger'
+        },
+        correctanswer : 'b',
     }, {
         question: 'What were daschund\'s bred to hunt?' ,
         choices: ['Frogs', 'Foxes', 'Badgers'],
@@ -121,12 +140,12 @@ document.getElementById("questions").addEventListener('click', function(){
             var choices;
             for (var i=0; i < questions.length; i++) {
                 choices = []
-                for (a in questions[i].choices) {
+                for (var a in questions[i].choices) {
                     var b = (parseInt(a) +1);
                     choices.push(
                         '<label>'
                             + '<input type="radio" name="question'+ i+ +'" value="' + a + '">' 
-                            + b  + '. '
+                            + a  + '. '
                             + questions[i].choices[a]
                         + '</label>'
                     );
@@ -142,11 +161,13 @@ document.getElementById("questions").addEventListener('click', function(){
     
         function showResults (questions, quizcontainer, resultscontainer) {
             var answerContainers = quizcontainer.querySelectorAll('.choices');
+            console.log(answerContainers);
             var useranswer = '';
             var numcorrect = 0;
             
             for(var i=0; i<questions.length; i++) {
                 useranswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
+                console.log(useranswer)
                 if (useranswer == questions[i].correctanswer) {
                     numcorrect ++;
                     answerContainers[i].style.color = 'lightgreen';
@@ -154,7 +175,7 @@ document.getElementById("questions").addEventListener('click', function(){
                     answerContainers[i].style.color = 'red';
                 }
             }
-            resultscontainer.innerHTML = numcorrect + ' out of ' + questions.length;
+             alert(numcorrect + ' out of ' + questions.length);
         }
         document.getElementById('submit').addEventListener('click', function() {
             showResults(questions, quizContainer, resultsContainer);
@@ -184,6 +205,8 @@ document.getElementById("loser").addEventListener('click', function() {
     setTimeout(function() {document.getElementById('h7').style.display = 'block';}, 6100);
     setTimeout(function() {document.getElementById('reformed').style.display = 'block';}, 7100);
     setTimeout(function() {document.getElementById('evil').style.display = 'block';}, 8100);
+    setTimeout(function() {document.getElementById('gohome').style.display = 'block';}, 8100);
+
     
     })
     
@@ -191,15 +214,28 @@ document.getElementById("loser").addEventListener('click', function() {
 //if they change their mind
 document.getElementById('reformed').addEventListener('click', function() {
     emptypage();
+    document.getElementById('gohome').style.display = 'block';
     showdivs(slideindex);
  })
 
 //If they stick to their guns
 document.getElementById('evil').addEventListener('click', function() {
     emptypage();
+    document.getElementById('gohome').style.display = 'block';
     document.body.style.background = 'black';
     document.querySelector('h2').style.display = 'block';
     document.getElementById('trump').style.display = 'block';
 })
 
+/*
+//To see other Dogs 
+document.getElementById('showotherdogs').addEventListener('click', function() {
+    emptypage();
+    document.getElementById('gohome').style.display = 'block';
+    document.body.style.background ='white';
+    document.querySelector('h4').style.display = 'none';
+    document.getElementById('backgroundbanner').style.display = 'block';
+
+})
+*/
 homepage();
